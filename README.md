@@ -10,9 +10,43 @@ Here are links to our active displays:\
 
 Here are the breakout boards and dev kits:\
 [CFAF240240A3-013TN-E1](https://www.crystalfontz.com/product/cfaf240240a3013tne1) display and adapter board \
-[CFAF240240A3-013TN-E1-2](https://www.crystalfontz.com/product/cfaf240240a3013tne12) full display dev kit
+[CFAF240240A3-013TN-E1-2](https://www.crystalfontz.com/product/cfaf240240a3013tne12) full display dev kit\
+
+Some demos use files stored on an SD card. Our [CFA10112 micro SD card adapter](https://www.crystalfontz.com/product/cfa10112) can be used. Use of an SD card only needed if using the bmp_demo to show images.
 
 An example schematic can be downloaded from [here](https://www.crystalfontz.com/products/document/4386/CFAF240240A1013T_0v1_CAM.zip).
+
+Note that the CFAF240240A family of displays use 3.3V logic. Using 5V logic can permanently damage the display. We use a [Seeeduino with switchable 3.3V logic](https://crystalfontz.com/product/cfapn15062), but you could alternately step the logic lines down to 3.3V.
+
+##Demo Code
+
+This repo includes two demo code folders and a folder for images:
+*Arduino_Demo includes code for the ATMEGA328 (e.g., Seeeduino or Arduino Uno) 
+*Adalogger_Demo includes code for the ATSAMD21G18 (e.g., Adalogger)
+* SD_CARD_CONTENTS contains images that can be loaded onto an SD card and displayed from there. Use of this folder is optional.
+
+###Included Demos
+There are six separate demos included in the code. Each one can be enabled or disabled by defining it as either 1 (enabled) or 0 (disabled). This is located just above the loop.
+
+#define fullscreen_demo     1
+#define colorbar_demo       1
+#define gammagradient_demo  1
+#define circle_demo         0
+#define font_demo           0
+#define bmp_demo            0
+
+When fullscreen_demo is enabled, the display will fill the screen with white, then red, then green, then blue for 0.5 seconds each.
+
+When colorbar_demo is enabled, eight different colors will be displayed on the screen in rows.
+
+When gammagradient_demo is enabled, three different colors will be displayed on the screen in rows.
+
+When circle_demo is enabled, a ceries of circles will be drawn.
+
+When font_demo is enabled, a different font styles will be shown, including using foreground and backgorund colors and moving text on the display.
+
+When bmp_demo is enabled, BMP images that are exactly 172854 bits and stored on an attached SD card will be displayed.  BMP must be 240x240 24-bit.
+
 ## Connection Details
 #### Connection details 
 
@@ -37,6 +71,35 @@ An example schematic can be downloaded from [here](https://www.crystalfontz.com/
 | 17              | DNC            | TE           | Tearing effect pin. Leave open if not in use. |
 | 18              | GND            | GND          | Ground                                        |
 
+
+If using the CFAF240240A3-013TN-E1 which includes the CFA10107 adapter board
+
+| Adapter Pin  | Seeeduino Pin  | Pin Function | Description       | 
+|--------------|----------------|--------------|------------------ |
+| 1 3v3        | 3V3            | VDD          | Supply voltage    |
+| 2 GND        | GND            | GND          | Ground            |
+| 3 SDA        | D11            | SDA          | Serial input      |
+| 4 SCLK       | D13            | SCLK         | Serial clock      |
+| 5 D/C        | D8             | D/C          | Data / Command    |
+| 6 SDO        | D12            | SDO          | Serial output     |
+| 7 /RST       | D9             | /RST         | Reset Pin         |
+| 8 /CS        | D10            | /CS          | Chip select       |    
+| 9 PWM        | D6             | PWM          | CABC PWM control  |
+| 10 TE        | DNC            | TE           | Tearing effect pin. Leave open if not in use. |      
+
+
+
+A CFA10112 micro SD card adapter should be used: https://www.crystalfontz.com/product/cfa10112
+| microSD Pin | Seeeduino Pin | Connection Description |
+|-------------|---------------|------------------------|
+| 2 (CS)      | 7             | SD CS                  |
+| 3 (DI)      | 11            | SD MOSI                |
+| 4 (VDD)     | 3v3           | +3.3V Power            |
+| 5 (SCLK)    | 13            | SD SCLK                |
+| 6 (VSS)     | GND           | Ground                 |
+| 7 (DO)      | 12            | SD MISO                |
+
+(microSD use is optional, if using enable DEMO_BMPIMAGES below)
 
 ## Additional Accessories
 Additional accessories for the products can be found at the bottom of each of the product pages. 
