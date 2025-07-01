@@ -6,15 +6,15 @@ For more information about other TFT options, see our full list [here](https://w
 
 ## Display information
 Here are links to our active displays:\
-[CFAF240240A3-013TN](https://www.crystalfontz.com/product/cfaf240240a3013tn)
+[CFAF240240A4-013TN](https://www.crystalfontz.com/product/cfaf240240a4013tn)
 
 Here are the breakout boards and dev kits:\
-[CFAF240240A3-013TN-E1](https://www.crystalfontz.com/product/cfaf240240a3013tne1) display and adapter board \
-[CFAF240240A3-013TN-E1-2](https://www.crystalfontz.com/product/cfaf240240a3013tne12) full display dev kit\
+[CFAF240240A4-013TN-E1](https://www.crystalfontz.com/product/cfaf240240a4013tne1) display and adapter board \
+[CFAF240240A4-013TN-E1-2](https://www.crystalfontz.com/product/cfaf240240a4013tnkit) full display dev kit\
 
 Some demos use files stored on an SD card. Our [CFA10112 micro SD card adapter](https://www.crystalfontz.com/product/cfa10112) can be used. Use of an SD card only needed if using the bmp_demo to show images.
 
-An example schematic can be downloaded from [here](https://www.crystalfontz.com/products/document/4386/CFAF240240A1013T_0v1_CAM.zip).
+An example schematic can be downloaded from [here](https://www.crystalfontz.com/products/document/4764/10107_h0v4_Build_Files.zip).
 
 Note that the CFAF240240A family of displays use 3.3V logic. Using 5V logic can permanently damage the display. We use a [Seeeduino with switchable 3.3V logic](https://crystalfontz.com/product/cfapn15062), but you could alternately step the logic lines down to 3.3V.
 
