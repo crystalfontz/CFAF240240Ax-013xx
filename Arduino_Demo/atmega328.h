@@ -28,11 +28,11 @@ extern uint8_t FAT32_Enable;
 // #13/D13 |  PB5 | LCD_SCK (hardware SPI)   | White
 // --------+------+--------------------------+------------
 //
-//The CFA10107 breakout board is now available for this display.
+//The CFA10107 breakout board is available for this display.
 //To connect using the breakout board, follow pinout above
 //LCD_MOSI is labeled as SDA on the board
 //MISO is labeled as SDO on the board
-// https://www.crystalfontz.com/product/cfaf240240a1013te11
+// https://www.crystalfontz.com/product/cfaf240240a4013te11
 
 #define LCD_IM3   0x40  
 #define uSD_CS    0x80 // Pin 7

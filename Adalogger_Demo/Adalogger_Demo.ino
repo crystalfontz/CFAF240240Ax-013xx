@@ -1,9 +1,9 @@
 //===========================================================================
 //
-//  Code written for Seeeduino v4.2 set to 3.3v (important!)
+//  Code written for Seeeduino set to 3.3v (important!)
 //
 //  CRYSTALFONTZ 240X240 SPI COLOR 1.3" TFT Family
-//  ref: https://www.crystalfontz.com/product/cfaf240240a3013tn
+//  ref: https://www.crystalfontz.com/product/cfaf240240a4013tn
 //
 //  This code uses 4-wire SPI mode.
 //
